@@ -63,3 +63,38 @@
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+
+.blog-excerpt h2 {
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+
+.blog-excerpt .header{
+    border-bottom: solid 1px #eee;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt h2 a{
+  color: #39393F;
+  font-size: 27.5px;
+}
+.blog-excerpt h2 span.meta{
+  font-size: 12px;
+  font-weight: 200;
+  float: right;
+}
+
+.blog-excerpt h2 a:hover{
+  color:#005580;
+}
+
+footer {
+    font-size: 12px;
+}
+footer li {
+    float: left;
+    padding-left: 10px;
+}
+
