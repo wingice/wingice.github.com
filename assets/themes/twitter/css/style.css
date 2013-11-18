@@ -98,3 +98,7 @@ footer li {
     padding-left: 10px;
 }
 
+pre {
+    padding: 0px;
+    border: 0 none;
+}

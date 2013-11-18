@@ -19,9 +19,9 @@ express_checkout_options:
 
 <!--more-->
 
-<pre class="prettyprint">
+<pre><code>
  :locale => 'US'
-</pre>
+</code></pre>
 
 This would work!
 Enjoy!,  :-)
