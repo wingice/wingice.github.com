@@ -8,13 +8,13 @@ tags: [Ruby on Rails, Email Service]
 {% include JB/setup %}
 
 
-It took me a little of time to find the working configuration for Amazon SES configuration. I recorded here for reference.
+It took me half an hour to find the working configuration for Amazon SES configuration. I recorded here for reference.
 
 <pre><code>
 ActionMailer::Base.smtp_settings = {
   :address              => 'email-smtp.us-east-1.amazonaws.com',
   :port                 => '587', # This is the secret, I had to set the port to 587, otherwise, it won't work!
-  :user_name            => 'you user name , assigned by amazib',
+  :user_name            => 'you user name , assigned by amazon',
   :password             => "you password",
   :domain               => "your.mail.domain",
   :authentication       => :login,
