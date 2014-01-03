@@ -38,6 +38,9 @@ Since my Amazon S3 region is 'ap-northeast-1', I ran into some issues, I would r
 
 Check [the blog](http://blog.littleblimp.com/post/53942611764/direct-uploads-to-s3-with-rails-paperclip-and), If you need more instructions.
 
+<!--more-->
+
+
 #### Input your Amazon account credentials
      I use [Figaro](https://github.com/laserlemon/figaro) to manage my enviroment-specific configurations.
 	 My application.yml:
