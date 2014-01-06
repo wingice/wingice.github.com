@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A good talent pool and candidate management platform: talentlienes.com"
+title: "A good talent pool and candidate management platform: talentlines.com"
 description: "An very good talent pool and candidate management platform: talentlienes.com"
 category: "Recruiting"
 tags: [Recruiting]

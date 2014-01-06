@@ -2,7 +2,7 @@
 layout: post
 title: "Integrate S3_direct_upload with Paperclip in Rails Application"
 description: "Direct uploading to Amazon S3 solution, build on S3_direct_upload and Paperclip "
-category: "RoR"
+category: "Ruby on Rails"
 tags: [Ruby on Rails, Amazon AWS, Amazon S3]
 ---
 {% include JB/setup %}
@@ -17,10 +17,10 @@ Since my Amazon S3 region is 'ap-northeast-1', I ran into some issues, I would r
 
 ### Preparations
 #### First add gems, then 'bundle install'
-<pre><code>
-   gem 'paperclip'
-   gem 'aws-sdk'
-   gem 's3_direct_upload'
+<pre><code class="ruby">
+gem 'paperclip'
+gem 'aws-sdk'
+gem 's3_direct_upload'
 </code></pre>
 
 #### Setup CORS Configuration for your Amazon S3 bucket
@@ -88,18 +88,14 @@ My application.yml:
 
 ####  application.css
 {% highlight ruby %}
-
-<pre><code>
  *= require_self
  *= require s3_direct_upload_progress_bars
  *= require custom
-</code></pre>
 {% endhighlight %}
 
 #### View:
 {% highlight ruby %}
-
-<pre><code>
+{% raw %}
 <div class="row">
     <div class="span6 file-input">
 	<%= s3_uploader_form callback_url: talent_attachments_url,
@@ -115,8 +111,8 @@ My application.yml:
         <% end %>
 
         <script id="template-upload" type="text/x-tmpl">
-            <div id="file-\{\%=o.unique_id %}" class="upload">
-	     \{\%=o.name%}
+            <div id="file-{%=o.unique_id %}" class="upload">
+	     {%=o.name%}
 	    <div class="progress"><div class="bar" style="width: 0%"></div></div>
             </div>
         </script>
@@ -129,13 +125,11 @@ My application.yml:
 	</table>
     </div>
 </div>
-</code></pre>
+{% endraw %}
 {% endhighlight %}
 
 ####   partial:
 {% highlight ruby %}
-
-<pre><code>
 <% if attachment.attachment_updated_at %>
     <tr>
   	<td><%= link_to truncate(attachment.attachment_file_name), download_talent_attachment_path(attachment) %></td>
@@ -144,15 +138,11 @@ My application.yml:
 	<td><%= link_to 'Delete', attachment, :method => :delete, :confirm => "You sure?"%></td>
     </tr>
 <% end %>
-</code></pre>
 {% endhighlight %}
 
 
 ####   controller
 {% highlight ruby %}
-
-<pre><code>
-
   def create
     talent = current_company.talents.find(params[:talent_id])
     temp_upload_path = CGI.unescape(params[:temp_upload_path]) rescue nil
@@ -183,7 +173,6 @@ My application.yml:
     @attachment = TalentAttachment.find(params[:id])
     redirect_to @attachment.attachment.expiring_url(30)
   end
-</code></pre>
 {% endhighlight %}
 
   
@@ -191,8 +180,6 @@ My application.yml:
 
 ####   Model:
 {% highlight ruby %}
-
-<pre><code>
 class TalentAttachment < ActiveRecord::Base
   attr_accessible :upload_path
 
@@ -257,19 +244,15 @@ class TalentAttachment < ActiveRecord::Base
     end
   end
  end
-
-</code></pre>
 {% endhighlight %}
 
 ### Update view
    In order to update the views when the uploading was completed, a "create.js.erb" is required.
 {% highlight ruby %}
-
    <% if @attachment.new_record? %>
   alert("Failed to upload files: <%= j @attachment.errors.full_messages.join(', ').html_safe %>");
 <% else %>
   $("#attachment-list").append("<%= j render(:partial =>'line', :locals => {attachment: @attachment}) %>");
 <% end %>
-
 {% endhighlight %}
 
