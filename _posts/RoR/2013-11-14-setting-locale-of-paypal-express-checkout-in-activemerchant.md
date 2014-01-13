@@ -2,7 +2,7 @@
 layout: post
 title: "Setting locale of Paypal express checkout in activemerchant"
 description: "How do you setting locale of Paypal express checkout in activemerchant "
-category: "Ruby on Rails"
+category: "RoR"
 tags: [Ruby on Rails]
 ---
 {% include JB/setup %}

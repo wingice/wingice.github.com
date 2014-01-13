@@ -2,7 +2,7 @@
 layout: post
 title: "Using Amazon SES to send mail in Rails"
 description: "Some tips on how to send email in Rails application with Amazon SES(simple email service)"
-category: "Ruby on Rails"
+category: "RoR"
 tags: [Ruby on Rails, Email Service]
 ---
 {% include JB/setup %}

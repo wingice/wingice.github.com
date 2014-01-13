@@ -2,7 +2,7 @@
 layout: post
 title: "Integrate S3_direct_upload with Paperclip in Rails Application"
 description: "Direct uploading to Amazon S3 solution, build on S3_direct_upload and Paperclip "
-category: "Ruby on Rails"
+category: "RoR"
 tags: [Ruby on Rails, Amazon AWS, Amazon S3]
 ---
 {% include JB/setup %}
@@ -150,12 +150,8 @@ My application.yml:
     @attachment.update_attachment_attributes
 
     if @attachment.save 
-      if @attachment.finalize_s3_file
-        flash[:success]= 'Attachment uploaded successfully'
-      else
-        remove_temp_file(@attachment)
-        flash[:error] = "Uploading failed, please try again."
-      end
+      TalentAttachment.delay.move_to_final_dir(@attachment.id)
+      flash[:success]= 'Attachment uploaded successfully'
     else
       flash[:error] = @attachment.errors.full_messages[0] if @attachment.errors.count > 0
     end
@@ -175,10 +171,27 @@ My application.yml:
   end
 {% endhighlight %}
 
-  
+Note: I use [sidekiq](https://github.com/mperham/sidekiq) for async jobs like sending emails and processing attachments on Amazon S3. Sidekiq provides an extension which add a method "delay" for ruby
+classes.
 
 
 ####   Model:
+db:
+{% highlight ruby %}
+  create_table "talent_attachments", :force => true do |t|
+    t.integer  "talent_id"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.string   "upload_path"
+    t.boolean  "is_moved",                :default => false, :null => false
+  end
+{% endhighlight %}
+
+Ruby code:
 {% highlight ruby %}
 class TalentAttachment < ActiveRecord::Base
   attr_accessible :upload_path
@@ -193,19 +206,6 @@ class TalentAttachment < ActiveRecord::Base
   validate :validate_max_count
   validates_attachment :attachment, :presence => true, :size => { :less_than => 10.megabytes }
 
-  def finalize_s3_file
-    begin
-      upload_url_data = UPLOAD_PATH_FORMAT.match(self.upload_path)
-      file_path_no_slash = self.attachment.path[1..-1]
-
-      s3 = AWS::S3.new
-      s3.buckets[ENV['bucket']].objects[file_path_no_slash].copy_from(upload_url_data[:path])
-      s3.buckets[ENV['bucket']].objects[upload_url_data[:path]].delete
-      return true
-    rescue AWS::S3::Errors::Base => e
-      return false
-    end
-  end
 
   def remove_temp_file
     s3 = AWS::S3.new
@@ -234,6 +234,21 @@ class TalentAttachment < ActiveRecord::Base
     end
   end
 
+  def self.move_to_final_dir(id)
+    attachment = TalentAttachment.find(id)
+    attachment.finalize_s3_file unless attachment.is_moved
+  end
+
+  def finalize_s3_file
+    upload_url_data = UPLOAD_PATH_FORMAT.match(self.upload_path)
+    file_path_no_slash = self.attachment.path[1..-1]
+    
+    s3 = AWS::S3.new
+    s3.buckets[ENV['bucket']].objects[file_path_no_slash].copy_from(upload_url_data[:path])
+    self.update_column(:is_moved, true)
+    s3.buckets[ENV['bucket']].objects[upload_url_data[:path]].delete
+  end
+
 
   protected
   MAX_ATTACHMENT_COUNT = 5
@@ -243,7 +258,8 @@ class TalentAttachment < ActiveRecord::Base
       errors.add(:base, "Too many attachments - maximum is #{MAX_ATTACHMENT_COUNT}") 
     end
   end
- end
+
+end
 {% endhighlight %}
 
 ### Update view
