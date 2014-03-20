@@ -7,9 +7,12 @@ tags: [Life]
 ---
 {% include JB/setup %}
 
-I used to write [blogs](http://strikespace.wordpress.com). Recently I found it still online. :-).
+I used to write [blogs](http://strikespace.wordpress.com) on Wordpress.com.
+But I stopped updating for a long, long time, :-(. 
 
-It is wonderful, I got my old posts back.
+
+
+Recently I found it still online. :-).It is wonderful!, I'm glad that I got my old posts back...
 
 
 
