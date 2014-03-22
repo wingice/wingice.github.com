@@ -102,3 +102,7 @@ pre {
     padding: 0px;
     border: 0 none;
 }
+
+.page-header h1{
+    font-size: 27.5px;
+}
