@@ -81,7 +81,6 @@ tags: [SEO]
 42. CSS Validator – Jigsaw <http://jigsaw.w3.org/css-validator>
 
 #### FireFox Addon：
-sexy lingerie 
 43. W3C Validator<http://validator.w3.org>
 44. WDG HTML Validator – Web Design Group <http://www.htmlhelp.com/tools/validator>
 45. CSE HTML Validator Lite<http://onlinewebcheck.com>
@@ -118,3 +117,4 @@ sexy lingerie
 66. Search Engine Saturation – SearchBliss <http://www.searchbliss.com/seo-tools/saturation.asp>
 67. Search Engine Saturation Tool – To the Web <http://totheweb.com/tools/sesat/index.php>
 68. Search Engine Saturation Tool – SEO Book <http://tools.seobook.com/general/sesat>
+
