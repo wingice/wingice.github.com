@@ -8,12 +8,13 @@ tags: [RoR]
 {% include JB/setup %}
 
 
-My solution is borrowed from https://github.com/rails/rails/issues/4099.
+My solution is borrowed from  [https://github.com/rails/rails/issues/4099](https://github.com/rails/rails/issues/4099).
 I tested it , it works like a charm.
 
 I create a parent-class to reuse the default_url_options function. 
 
-<pre><code>
+
+{% highlight ruby %}
 class DynamicBaseMailer < ActionMailer::Base
   default  from: Proc.new { choose_mail_from()}
   
@@ -30,5 +31,5 @@ class DynamicBaseMailer < ActionMailer::Base
     ...... # you code here
   end
 end
+{% endhighlight %}
 
-</code></pre>
