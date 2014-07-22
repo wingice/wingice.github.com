@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "一个简单易用的面试和招聘管理系统"
+title: "一个简单易用的招聘管理系统"
 description: "推荐一个适合中小企业使用的招聘管理平台，它能帮助加快面试进度，跟踪候选人信息和记录面试结果，易于使用而且免费！"
 category: "recruiting"
 tags: [Recruiting]
