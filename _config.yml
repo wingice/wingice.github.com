@@ -4,6 +4,7 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
+markdown: kramdown
 
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 paginate: 10
