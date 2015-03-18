@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: 'rouge'
+highlighter: 'pigments'
 markdown: kramdown
 
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
