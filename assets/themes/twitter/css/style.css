@@ -28,7 +28,9 @@
   margin-bottom: 20px;
   font-weight: bold; }
 
+
 /* tag_box */
+div.tags { margin: 40px 0; }
 .tag_box {
   list-style: none;
   margin: 0;
@@ -88,6 +90,22 @@
 
 .blog-excerpt h2 a:hover{
   color:#005580;
+}
+
+.blog-excerpt article h1,
+.post-full .content h1 {
+    font-size: 21.5px;
+    line-height: 50px;
+    font-weight: normal;
+    color: #505050;
+}
+.blog-excerpt article h2,
+.post-full .content h2{
+    font-size: 18.5px;
+    line-height: 36px;
+    font-weight: normal;
+    color: #505050;
+    margin: 12px 0;
 }
 
 footer {
