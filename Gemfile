@@ -2,5 +2,5 @@
 source 'http://ruby.taobao.org'
 
 gem 'github-pages'
-gem "therubyracer"
-gem 'rouge'
+#gem "therubyracer"
+#gem 'rouge'
