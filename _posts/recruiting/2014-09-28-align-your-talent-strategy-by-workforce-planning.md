@@ -3,7 +3,7 @@ layout: post
 title: "Align your talent strategy by workforce planning"
 description: "Align your talent strategy by workforce planning, talent pools builidng"
 category: "recruiting"
-tags: [Recruiting]
+tags: [recruiting]
 ---
 {% include JB/setup %}
 

@@ -2,8 +2,8 @@
 layout: post
 title: Recommend an easy-to-use recruitment software
 description: Recommend an online recruiting software and applicant tracking system
-category: "Recruiting"
-tags: [Recruiting]
+category: "recruiting"
+tags: [recruiting]
 ---
 {% include JB/setup %}
 

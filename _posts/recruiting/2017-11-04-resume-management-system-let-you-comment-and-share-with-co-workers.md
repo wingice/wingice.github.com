@@ -2,8 +2,8 @@
 layout: post
 title: Resume Management System Let You Comment and Share with Co workers
 description: "Online Resume Management System let you comment, tag and collaborate with co-workers"
-category: "Recruiting"
-tags: [Recruiting]
+category: "recruiting"
+tags: [recruiting]
 ---
 {% include JB/setup %}
 
