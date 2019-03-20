@@ -3,7 +3,7 @@ layout: post
 title: "How to set default_url_host in action_mailer for multiple domain rails project"
 description: ""
 category: "RoR"
-tags: [RoR]
+tags: [Ruby on Rails]
 ---
 {% include JB/setup %}
 

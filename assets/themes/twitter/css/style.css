@@ -1,13 +1,9 @@
-/* Custom container */
-.container-narrow {
-  margin: 0 auto;
-  max-width: 700px; }
+body { font-size: 16px; }
 
-.container-narrow > hr {
-  margin: 30px 0; }
-
-.navbar .nav {
-  float: right; }
+.navbar-brand {
+    font-size: 22px;
+    font-weight: 200;
+}
 
 /* posts index */
 .post > h3.title {
@@ -76,6 +72,7 @@ div.tags { margin: 40px 0; }
 .blog-excerpt .header{
     border-bottom: solid 1px #eee;
     margin-bottom: 10px;
+    padding-bottom: 6px;
 }
 
 .blog-excerpt h2 a{
@@ -83,7 +80,7 @@ div.tags { margin: 40px 0; }
   font-size: 27.5px;
 }
 .blog-excerpt h2 span.meta{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   float: right;
 }
@@ -113,7 +110,8 @@ footer {
 }
 footer li {
     float: left;
-    padding-left: 10px;
+    padding-left: 40px;
+    list-style: none;
 }
 
 pre {

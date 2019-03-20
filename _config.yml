@@ -7,7 +7,6 @@ highlighter: 'pigments'
 markdown: kramdown
 
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
-paginate: 10
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -139,3 +138,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+plugins: [jekyll-paginate]
+paginate: 10
