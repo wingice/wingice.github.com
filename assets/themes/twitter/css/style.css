@@ -62,22 +62,15 @@ div.tags { margin: 40px 0; }
   border: 1px solid #4c964d;
   color: #FFF; }
 
-
-.blog-excerpt h2 {
-  margin-bottom: 0px;
-  margin-top: 40px;
-}
-
-
 .blog-excerpt .header{
     border-bottom: solid 1px #eee;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    margin-top: 80px;
+    margin-bottom: 16px;
 }
 
 .blog-excerpt h2 a{
   color: #39393F;
-  font-size: 27.5px;
+  font-size: 24.5px;
 }
 .blog-excerpt h2 span.meta{
   font-size: 14px;
@@ -121,4 +114,15 @@ pre {
 
 .page-header h1{
     font-size: 27.5px;
+}
+
+.w80p {
+    max-width: 80%;
+    display: block;
+    height: auto;
+}
+
+.v20s {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

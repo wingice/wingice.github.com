@@ -7,13 +7,12 @@ tags: [Applicant Tracking System]
 ---
 {% include JB/setup %}
 
-[TalentLists, a simple Applicant Tracking System](http://www.talentlists.com), provides very easy to use pages for your 
-applicants, they can upload their resumes and apply the positions you posted.
-![useful image]({{ site.url }}/assets/images/ats/application_form_en.png)
+Do you ever want to let the applicants to apply job positions from your website directly? If yes, 
+[TalentLists](https://www.talentlists.com/pages/applicant-tracking-system) provides simple and elegant 
+applicant tracking pages for you to integrate to your website, where applicants can upload their resumes and apply the positions you posted. Just check out the screenshot below:
 
-an online Resume Management System, which let you
-create resume folders based on different purposes, link each folder for a talent pool, or each folder for a job postion.
+![applicant tracking system](https://www.talentlists.com/images/ui_shots/application_form_en.png){:class="img-thumbnail w80p v20s"}
 
-The system also supports full text searching, so no need to worry about the unstructureed information.
+Applicants just need to upload their resume, input their emails and phone numbers. Then the system will monitor the application process and notify you to schedule interviews for them.
 
-And more conveniently, you can track interview and hiring process of the candidates(resumes) in our system.
+
