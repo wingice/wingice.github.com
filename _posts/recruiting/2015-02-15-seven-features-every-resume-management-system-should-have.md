@@ -22,5 +22,4 @@ Although many RMS’s claim to blend seamlessly with the organization’s recrui
 - Integration with candidate management system;
 - Cloud based, high performance and automatic backup, no need to worry about deployment.
 
-TalentLists [Resume Management System](http://www.talentlists.com/pages/resume-management-software) supports all the features mentioned above, and integrated with candidate management, talent planning and other recruitment features. And all these features are integrated together, with an intuitive, simple and easy-to-use interface.
-
+TalentLists [Resume Management System](http://www.talentlists.com/pages/resume-management-system) supports all the features mentioned above, and integrated with candidate management, talent planning and other recruitment features. And all these features are integrated together, with an intuitive, simple and easy-to-use interface.

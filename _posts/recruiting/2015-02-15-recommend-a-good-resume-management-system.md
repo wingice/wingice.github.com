@@ -19,10 +19,8 @@ tags: [简历管理,人才库管理,人才管理]
 - 人才库管理;
 - 强大的搜索功能,包括结构化和全文搜索功能, 便于及时找到所需人才;
 - 集中管理, 避免招聘人员各自为政.
- 
 
-TalentLines的[简历管理系统](http://www.talentlines.com/pages/resume-management-software)支持以上所有特性, 并具备候选人管理等企业招聘等不可缺少的特性。更加难得的是,该系统将所有这些特性有机地融合在一起, 使用起来简单方便。
+
+TalentLines的[简历管理系统](http://www.talentlines.com/pages/resume-management-system)支持以上所有特性, 并具备候选人管理等企业招聘等不可缺少的特性。更加难得的是,该系统将所有这些特性有机地融合在一起, 使用起来简单方便。
 
 TalentLines的简历管理系统基于最先进的云计算技术，数据自动备份，无须安装即可直接使用。
-
- 
